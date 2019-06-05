@@ -1,6 +1,14 @@
 image:
   file: Dockerfile
 tasks:
+  # React app
+  - init: >
+      cd client/react &&
+      nvm use &&
+      npm install
+    command: >
+      npm run start
+  # Angular app
   - init: >
       cd client/angular &&
       nvm use &&
@@ -8,26 +16,21 @@ tasks:
       yes | npm install --only="dev"
     command: >
       ng serve
-  - init: >
-      cd client/react &&
-      nvm use &&
-      npm install
-    command: >
-      npm run start
+  # Node.js API
   - init: >
       cd server/node.js-express &&
       nvm use &&
       npm install
     command: >
       npm run dev
+  # ASP.NET MVC and API
   - init: >
       cd server/asp.net-core
     command: >
       dotnet run
 ports:
-  - port: 4200
-    onOpen: open-preview
   - port: 3000
     onOpen: open-preview
+  - port: 4200
   - port: 8888
   - port: 5001
