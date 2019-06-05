@@ -3,11 +3,13 @@ image:
 tasks:
   - init: >
       cd client/angular &&
+      nvm use &&
       npm install
     command: >
       ng serve
   - init: >
       cd client/react &&
+      nvm use &&
       npm install
     command: >
       npm start
