@@ -8,6 +8,7 @@ RUN sudo apt-get update \
  && sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/*
 
 # Setup PostgreSQL server for user gitpod
+USER gitpod
 ENV PATH="$PATH:/usr/lib/postgresql/10/bin"
 ENV PGDATA="/home/gitpod/.pg_ctl/data"
 RUN mkdir -p ~/.pg_ctl/bin ~/.pg_ctl/data ~/.pg_ctl/sockets \
@@ -22,3 +23,6 @@ ENV DATABASE_URL="postgresql://gitpod@localhost"
 # tasks from a Dockerfile. This workaround checks, on each bashrc eval, if the
 # PostgreSQL server is running, and if not starts it.
 RUN printf "\n# Auto-start PostgreSQL server.\n[[ \$(pg_ctl status | grep PID) ]] || pg_start > /dev/null\n" >> ~/.bashrc
+
+# Give back control
+USER root
