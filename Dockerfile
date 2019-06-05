@@ -24,5 +24,14 @@ ENV DATABASE_URL="postgresql://gitpod@localhost"
 # PostgreSQL server is running, and if not starts it.
 RUN printf "\n# Auto-start PostgreSQL server.\n[[ \$(pg_ctl status | grep PID) ]] || pg_start > /dev/null\n" >> ~/.bashrc
 
+# Default to production:
+# https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md
+# Set NODE_PATH so globally installed modules will be found:
+# https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders
+ENV NODE_ENV=production NODE_PATH=/usr/local/lib/node_modules
+
+# Install global Node packages
+RUN npm install --global @angular/cli prettier
+
 # Give back control
 USER root
