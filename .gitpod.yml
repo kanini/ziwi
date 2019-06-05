@@ -20,7 +20,8 @@ tasks:
   - init: >
       cd server/node.js-express &&
       nvm use &&
-      npm install
+      npm install &&
+      npm install --only="dev"
     command: >
       npm run dev
   # ASP.NET MVC and API
