@@ -1,2 +1,20 @@
 image:
   file: Dockerfile
+tasks:
+  - init: >
+      cd client/angular &&
+      npm install
+    command: >
+      cd client/angular &&
+      ng start
+  - init: >
+      cd client/react &&
+      npm install
+    command: >
+      cd client/react &&
+      npm start
+ports:
+  - port: 4200
+    onOpen: open-preview
+  - port: 3000
+    onOpen: open-preview
