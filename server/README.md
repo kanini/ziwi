@@ -1,12 +1,12 @@
 This folder contains two options to run your back-end:
 
-## 1. `node.js-express`
+### `./node.js-express`
 
 This is a REST API written in Node.js with Express middleware. It does not
 serve a front-end app or HTML pages, so you'll need to run `client/angular` or
 `client/react` to have a web UI.
 
-## 3. `asp.net-core`
+### `./asp.net-core`
 
 This project was created with .NET Command Line Tools (2.2.105),
 `dotnet new mvc --name Ziwi --language C# --auth Individual`.
