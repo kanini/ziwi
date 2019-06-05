@@ -30,9 +30,17 @@ RUN printf "\n# Auto-start PostgreSQL server.\n[[ \$(pg_ctl status | grep PID) ]
 # https://nodejs.org/api/modules.html#modules_loading_from_the_global_folders
 ENV NODE_ENV=production NODE_PATH=/usr/local/lib/node_modules
 
-# Install Node according to .nvmrc and then global Node packages
+# Install Node Version Manager
+COPY ["install-nvm.sh","/home/gitpod"]
+RUN cd /home/gitpod \
+ && chmod +x install-nvm.sh \
+ && ./install-nvm.sh
+
+# Use .nvmrc then global Node packages
 COPY [".nvmrc","/home/gitpod"]
-RUN cd /home/gitpod && nvm install && npm install --global @angular/cli prettier
+RUN cd /home/gitpod \
+ && nvm install \
+ && npm install --global @angular/cli prettier
 
 # Give back control
 USER root
