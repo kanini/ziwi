@@ -1,0 +1,6 @@
+v12.2.0
+
+# nvm use, nvm install, nvm exec, nvm run, and nvm which will
+# respect an .nvmrc when a version is not supplied.
+#
+# 12.x.x is LTS, a long term supported version
