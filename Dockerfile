@@ -32,7 +32,7 @@ ENV NODE_ENV=production NODE_PATH=/usr/local/lib/node_modules
 
 # Use .nvmrc then install global Node packages
 COPY [".nvmrc","/home/gitpod"]
-RUN /bin/bash -c "cd /home/gitpod && source /home/gitpod/.nvm/nvm.sh && nvm install && yes | npm install --global @angular/cli prettier"
+RUN /bin/bash -c "cd /home/gitpod && source /home/gitpod/.nvm/nvm.sh && nvm install && yes | npm install --global @angular/cli prettier nodemon"
 
 # Give back control
 USER root

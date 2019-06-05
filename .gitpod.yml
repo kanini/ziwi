@@ -13,9 +13,21 @@ tasks:
       nvm use &&
       npm install
     command: >
-      npm start
+      npm run start
+  - init: >
+      cd server/node.js-express &&
+      nvm use &&
+      npm install
+    command: >
+      npm run dev
+  - init: >
+      cd server/asp.net-core
+    command: >
+      dotnet run
 ports:
   - port: 4200
     onOpen: open-preview
   - port: 3000
     onOpen: open-preview
+  - port: 8888
+  - port: 5001
