@@ -5,13 +5,11 @@ tasks:
       cd client/angular &&
       npm install
     command: >
-      cd client/angular &&
-      ng start
+      ng serve
   - init: >
       cd client/react &&
       npm install
     command: >
-      cd client/react &&
       npm start
 ports:
   - port: 4200
