@@ -4,8 +4,8 @@ tasks:
   - init: >
       cd client/angular &&
       nvm use &&
-      npm install &&
-      npm install --only="dev"
+      yes | npm install &&
+      yes | npm install --only="dev"
     command: >
       ng serve
   - init: >
