@@ -10,4 +10,4 @@ simple enough to understand for moderately experienced full-stack devs.
 If you have questions, please contact
 [robert-claypool](https://github.com/robert-claypool). Happy hacking!
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kanini/full-stack-sandbox)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kanini/ziwi)
