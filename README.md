@@ -1,4 +1,4 @@
-# Ziwi
+<img alt="Ziwi logo" width="180" src="https://raw.githubusercontent.com/kanini/ziwi/master/logo-and-name.svg?sanitize=true">
 
 With Gitpod, this repo provides a ready-to-code dev environment having
 VS Code, Node.js, Postgres, ASP.NET Core MVC, SQLite, Angular 6, and React 16.
