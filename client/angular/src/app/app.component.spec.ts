@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'ziwi'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ziwi');
+    expect(app.title).toEqual('Ziwi on Angular 6');
   });
 
   it('should render title in a h1 tag', () => {
