@@ -24,6 +24,9 @@ ENV DATABASE_URL="postgresql://gitpod@localhost"
 # PostgreSQL server is running, and if not starts it.
 RUN printf "\n# Auto-start PostgreSQL server.\n[[ \$(pg_ctl status | grep PID) ]] || pg_start > /dev/null\n" >> ~/.bashrc
 
+# Our dotfiles improve Bash, Vim, psql, and sqlite3.
+COPY ["dotfiles/*","~/"]
+
 # Default to production:
 # https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md
 # Set NODE_PATH so globally installed modules will be found:
