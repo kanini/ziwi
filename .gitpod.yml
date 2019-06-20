@@ -34,4 +34,4 @@ ports:
     onOpen: open-preview
   - port: 4200
   - port: 8888
-  - port: 5001
+  - port: 5000

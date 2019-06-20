@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -60,7 +60,12 @@ namespace Ziwi
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // The app does not UseHttpsRedirection because HTTPS is terminated
+            // by Let's Encrypt when running this in GitPod. If the app issues
+            // HTTPS redirect responses, then GitPod's "Open Preview" and
+            // "Open Browser" buttons will not work.
+            // app.UseHttpsRedirection();
+
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
