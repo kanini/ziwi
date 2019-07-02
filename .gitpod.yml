@@ -28,7 +28,7 @@ tasks:
   - init: >
       cd server/asp.net-core
     command: >
-      dotnet run
+      dotnet watch run
 ports:
   - port: 3000
     onOpen: open-preview
